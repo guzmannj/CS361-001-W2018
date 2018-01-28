@@ -1,6 +1,6 @@
 # this is a comment
 
-TARGET=first
+TARGET=ZombieApocalypes-SPR
 
 
 default: pdf
