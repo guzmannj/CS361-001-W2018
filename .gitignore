@@ -1,4 +1,5 @@
 gnore object and archive files
 *.[ao]
 
-# ignore node_modules folder, should be installed locally with "npm install"
+# ignore node_modules folder, should be installed locally with "npm install
+node_modules/
