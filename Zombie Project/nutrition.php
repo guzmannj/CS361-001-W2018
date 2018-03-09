@@ -25,21 +25,9 @@
   <body>
 
     <header>
-        <h2>Zombie Prep</h2>
-        <div class="row">
-        <nav class="navbar navbarnpm-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Zombie Prep</a>
-                  </div>
-              <ul class="nav navbar-nav">
-                <li><a href="/goals.html">Goals</a></li>
-                <li><a href="/set_nutrition.html">Nutrition</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        <?php
+            include('navbar.php');
+        ?>
         
     </header>
     <main>
