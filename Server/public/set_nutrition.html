@@ -43,6 +43,7 @@
         
     </header>
     <main>
+      <!-- This main container-->
     <div class="container">
         <div class="goals col-sm-12 text-center">
             <div class="list_goals">
@@ -51,6 +52,81 @@
         </div>
         
     </div>
+
+    <div class="container">
+      <form action="/action_page.php">
+
+        <!-- This implements the height bar-->
+        <div class="row">
+          <div class="col-25">
+            <label for="height">Your Height</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="height" name="yourheight" placeholder="Your height..">
+          </div>
+        </div>
+
+        <!-- This implements the weight bar-->
+        <div class="row">
+          <div class="col-25">
+            <label for="weight">Your Weight</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="weight" name="yourweight" placeholder="Your weight..">
+          </div>
+        </div>
+
+        <!-- This implements the age bar-->
+        <div class="row">
+          <div class="col-25">
+            <label for="age">Your Age</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="age" name="yourage" placeholder="Your age..">
+          </div>
+        </div>
+
+        <!-- This implements the gender bar-->
+        <div class="row">
+          <div class="col-25">
+            <label for="gender">Gender</label>
+          </div>
+          <div class="col-75">
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- This implements the activity bar -->
+        <div class="row">
+          <div class="col-25">
+            <label for="activity">Your activity level</label>
+          </div>
+          <div class="col-75">
+            <select id="activity" name="activity">
+              <option value="sedentary">Sedentary</option>
+              <option value="moderate">Moderate</option>
+              <option value="active">Active</option>
+              <option value="veryActive">Very active</option>
+            </select>
+          </div>
+        </div>
+        
+        Total : <br />
+        <input disabled id="result" />
+        <br />
+
+         <!-- This implements the submit button calling the calculation function on click-->
+        <div class="row">
+          <input type="submit" value="Submit" Onclick="return calc();">
+        </div>
+      </form>
+    </div>
+    
+    </body>
+    </html>
 
     </main>
                 
