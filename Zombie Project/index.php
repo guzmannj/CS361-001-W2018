@@ -21,10 +21,16 @@
                     <?php
                         $query = "SELECT * FROM goal";
                         $data = $conn->query($query);
-
-                        foreach($data as $row){
-                            echo '<li>'.$row["activity"] . ' ' .$row["dist"]. '</li>';
+                        if ($data->rowCount()){
+                            foreach($data as $row){
+                                echo '<li>'.$row["activity"] . ' ' .$row["dist"]. '</li>';
+                            }      
                         }
+                        else{
+                            echo "<h1>You don't have any goals to show!</h2>";
+                        }
+
+                        
                     ?>
                 </ul>
             </div>
