@@ -5,10 +5,7 @@
 // I provided the link to the database you will need to create in the Announcements on Canvas.
 // You can either make your own with the correct tables or ask me for a copy of it. 
 
-$servername = '';
-$dbname = '';
-$username = '';
-$password = '';
+
 
 $conn = new PDO("mysql:host=$servername; dbname=$dbname; charset=utf8", $username, $password, 
             [PDO::ATTR_EMULATE_PREPARES => false, 
