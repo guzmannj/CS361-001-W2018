@@ -37,7 +37,7 @@
             <div class="row">
                 <img src="images/chart.png"> 
             </div>
-            <a href="set_nutrition.html">
+            <a href="set_nutrition.php">
                 <button type="button" class="btn btn-primary">Set Nutrition Info</button>
             </a>
         </div>
