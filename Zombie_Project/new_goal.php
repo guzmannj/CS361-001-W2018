@@ -3,7 +3,6 @@
     if (isset($_POST['submitted'])){
         include('connect_sql.php');
         include('add_new_goals.php');
-    
     }
 ?>
 <!DOCTYPE html>
@@ -27,14 +26,15 @@
         <form method="post" action="new_goal.php">
             <input type="hidden" name="submitted" value="true"/>
             <fieldset>
-                <label> Activity: <input type="text" name="activity" /></label>
-                <label> Distance or Time: <input type="text" name="time" /></label>
+                <label> Activity: <input type="text" name="activity" id="activity" required/></label>
+                <label> Distance or Time: <input type="number" name="time" id="time" required/></label>
             </fieldset>
-            <br />
+            <br/>
             <input type="submit" value="Make a new goal"/>
         </form>
 
     </div>
-    </main>               
+    </main>   
+
   </body>
 </html>

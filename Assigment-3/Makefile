@@ -1,7 +1,6 @@
 # this is a comment
 
-TARGET=ZombieApocalypsePrep-SDSUI
-
+TARGET=ZombieApocalypsePrep
 
 default: pdf
 
