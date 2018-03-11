@@ -1,39 +1,17 @@
+<?php
+    if (isset($_POST['submitted'])){
+			include('connect_sql.php');
+			include('add_new_nutrition.php');
+	
+	}
+?>
+
 <!DOCTYPE html>
-
-<html lang="en-US">
-
   <head>
     <?php
-      include('head.php');
+			include('head.php');
     ?>  
   </head>
-
-  <?php
-	// names of variables with NAME of object
-	$weight = $_POST['weight'];
-	$height =$_POST['height'];
-	$age = $_POST['age'];
-	$gender = $_POST['gender'];
-
-      //this calculates the basal amount of calories that you need using gender to store the calculated number
-    function calculate() {
-		switch ($gender)
-			{
-			case 'female':
-				$gender= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
-				echo "<p>Your estimated daily metabolic rate is $gender </p>";
-				echo "<p>This means that you need rouhgly $gender calories a day to maintain your current weight.</p>";
-
-			break;
-			case 'male':
-				$gender= 66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
-				echo "<p>Your estimated daily metabolic rate is $gender </p>";
-				echo "<p>This means that you need roughly $gender calories a day to maintain your current weight.</p>";
-		}
-	}
-    
-  ?>
-
   <body>
 
     <header>
@@ -67,13 +45,15 @@
 			</div>
 			</div>
 
-			<!-- This implements the weight bar-->
+			<!-- This implements the weight bar
+						Weight needs to be programed as weigh,
+						SQL considers weigh as a special character-->
 			<div class="row">
 			<div class="col-25">
 				<label for="weight">Your Weight</label>
 			</div>
 			<div class="col-75">
-				<input type="text" id="weight" name="weight" placeholder="Your weight..">
+				<input type="text" id="weigh" name="weigh" placeholder="Your weight..">
 			</div>
 			</div>
 
