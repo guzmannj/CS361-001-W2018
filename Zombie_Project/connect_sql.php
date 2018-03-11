@@ -1,0 +1,20 @@
+<?php
+$servername = 'oniddb.cws.oregonstate.edu';
+$dbname = 'laik-db';
+$username = 'laik-db';
+$password = '8d2v5ulUA0sMMR4t';
+
+$conn = new PDO("mysql:host=$servername; dbname=$dbname; charset=utf8", $username, $password, 
+            [PDO::ATTR_EMULATE_PREPARES => false, 
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+try {
+    //$conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+   // $conn = null;
+?>
