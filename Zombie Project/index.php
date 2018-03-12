@@ -41,9 +41,7 @@
                         }
                         else{
                             echo "<h1>You don't have any goals to show!</h2>";
-                        }
-
-                        
+                        }   
                     ?>
                 </ul>
             </div>
@@ -54,7 +52,18 @@
         
         <div class="Nutrition col-sm-6 text-center">
             <div class="row">
-                <img src="images/chart.png"> 
+                <?php
+                    $query = "SELECT * FROM traits ORDER by traitid DESC LIMIT 1";
+                    $data = $conn->query($query);
+                    if ($data->rowCount()){
+                        foreach($data as $row){
+                            echo '<li> '.$row["calories"] . '</li>';
+                        }      
+                    }
+                    else{
+                        echo "<h1>Tables goes here!</h2>";
+                    }      
+                ?>
             </div>
             <a href="set_nutrition.php">
                 <button type="button" class="btn btn-primary">Set Nutrition Info</button>
