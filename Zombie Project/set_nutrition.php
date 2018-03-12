@@ -63,7 +63,7 @@
 				<label for="age">Your Age</label>
 			</div>
 			<div class="col-75">
-				<input type="text" id="age" name="age" placeholder="Your age..">
+				<input type="number" id="age" name="age" placeholder="Your age..">
 			</div>
 			</div>
 
