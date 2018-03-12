@@ -5,6 +5,10 @@ include('connect_sql.php');
 $activity = $_POST['activity'];
 $time_dis = $_POST['time'];
 
+$message = '';
+
+if($time_dis <=0) $message = "Time should be more than 1 minute";
+else{
 try {
     //$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
@@ -30,4 +34,9 @@ catch(PDOException $e)
         
     echo $sql . "<br>" . $e->getMessage();
     }
-$conn = null;
+$conn = null;}
+if($message != ""){
+echo '<script language="javascript"> alert("'.$message.'")</script>';
+}
+
+?>
