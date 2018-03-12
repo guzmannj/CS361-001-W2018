@@ -12,6 +12,7 @@
 			include('head.php');
     ?>  
   </head>
+
   <body>
 
     <header>
@@ -41,7 +42,7 @@
 				<label for="height">Your Height</label>
 			</div>
 			<div class="col-75">
-				<input type="text" id="height" name="height" placeholder="Your height..">
+				<input type="text" id="height" name="height" placeholder="Your height in inches..">
 			</div>
 			</div>
 
@@ -53,7 +54,7 @@
 				<label for="weight">Your Weight</label>
 			</div>
 			<div class="col-75">
-				<input type="text" id="weigh" name="weigh" placeholder="Your weight..">
+				<input type="text" id="weight" name="weight" placeholder="Your weight in pounds..">
 			</div>
 			</div>
 
