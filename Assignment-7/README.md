@@ -2,7 +2,7 @@ Prerequisites.
 
 This software does not require any prerequisites but an internet connection.
 
-How to use ZombieApocalypsePrep 
+How to use ZombieApocalypsePrep
 
 Step 1: Have strong Internet connection
 
