@@ -1,6 +1,5 @@
 <?php
     if (isset($_POST['submitted'])){
-			include('connect_sql.php');
 			include('add_new_nutrition.php');
 	
 	}
