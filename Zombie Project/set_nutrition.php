@@ -13,23 +13,46 @@
 	$weight = $_POST['weight'];
 	$height =$_POST['height'];
 	$age = $_POST['age'];
-	$gender = $_POST['gender'];
 
+
+	$min_age = 0;
+	$min_weight = 10;
+	$min_height = 12;
+	$max_age = 115;
+	$max_height = 120;
+	$min_weight = 450;
       //this calculates the basal amount of calories that you need using gender to store the calculated number
     function calculate() {
-		switch ($gender)
-			{
-			case 'female':
-				$gender= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
-				echo "<p>Your estimated daily metabolic rate is $gender </p>";
-				echo "<p>This means that you need rouhgly $gender calories a day to maintain your current weight.</p>";
 
-			break;
-			case 'male':
-				$gender= 66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
-				echo "<p>Your estimated daily metabolic rate is $gender </p>";
-				echo "<p>This means that you need roughly $gender calories a day to maintain your current weight.</p>";
+		if(filter_var($weight, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min_weight, "max_range"=>$max_weight))) === false) {
+				if(filter_var($height, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min_height, "max_range"=>$max_height))) === false) {
+						if(filter_var($age, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min_age, "max_range"=>$max_age))) === false) {
+								switch ($gender)
+								{
+								case 'female':
+			
+								$gender= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $test_age);
+								echo "<p>Your estimated daily metabolic rate is $test_female_gender </p>";
+								echo "<p>This means that you need rouhgly $test_female_gender calories a day to maintain your current weight.</p>";
+
+								break;
+								case 'male':
+								$gender= 66 + (13.7 *$weight) + (5 * $height) - (6.8 * $test_age);
+								echo "<p>Your estimated daily metabolic rate is $test_female_gender </p>";
+								echo "<p>This means that you need roughly $test_female_gender calories a day to maintain your current weight.</p>";
+								}
+						}else{
+							echo("Variable value is not within the legal age range");
+						}
+			
+				}else{
+					echo("Variable value is not within the legal height range");
+				}
+			
+		}else{
+			echo("Variable value is not within the legal weight range");		
 		}
+
 	}
     
   ?>

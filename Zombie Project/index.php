@@ -29,7 +29,6 @@
                         else{
                             echo "<h1>You don't have any goals to show!</h2>";
                         }
-
                         
                     ?>
                 </ul>
