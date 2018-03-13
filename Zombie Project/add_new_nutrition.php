@@ -18,14 +18,14 @@ try{
         case 'female':
         $calories= 655.1 + (4.35 * $weigh ) + (4.7 * $height) - (4.7 * $age);
         $protein = $weigh * 0.75;
-        $carbs = $calories / 9;
-        $fat = $calories / 4;
+        $carbs = $calories / 4;
+        $fat = $calories / 9;
         break;
         case 'male':
         $calories= 66 + (6.2 *$weigh) + (12.7 * $height) - (6.76 * $age);
         $protein = $weigh * 0.75;
-        $carbs = $calories / 9;
-        $fat = $calories / 4;
+        $carbs = $calories / 4;
+        $fat = $calories / 9;
         }
     //}
     echo "calories $calories weight $weigh height $height age $age gender $gender";

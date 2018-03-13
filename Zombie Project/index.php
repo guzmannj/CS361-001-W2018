@@ -31,7 +31,11 @@
             <div class="row list_goals">
                 <ul>
                     <?php
-                        echo "<h3>Your goals!</h3>
+                        
+                        $query = "SELECT * FROM goal";
+                        $data = $conn->query($query);
+                        if ($data->rowCount()){
+                            echo "<h3>Your goals!</h3>
                         <div class='col-sm-12 text-left subg'>
                         <table class='table table-inverse'>
                         <thead>
@@ -41,12 +45,9 @@
                         </tr>
                         </thead> 
                         "  ;
-                        $query = "SELECT * FROM goal";
-                        $data = $conn->query($query);
-                        if ($data->rowCount()){
                             foreach($data as $row){
                                 echo "  
-                              <tr>
+                                <tr class='LI' id=" .$row['goalid'].  ">
                                 <td>".$row["activity"]."</td>
                                 <td>" . $row["dist"] . "</td>
                               </tr>
@@ -80,8 +81,9 @@
                     if ($data->rowCount()){
                         foreach($data as $row){
                            echo "
-                           
-                           <table class='table table-inverse text-left'>
+                           <h3>Your nutrition information!</h3>
+                           <div class='col-sm-12 text-left'>
+                           <table class='table table-inverse'>
                                 <thead>
                                     <tr>
                                     <th>Nutrients</th>
@@ -91,7 +93,7 @@
                                 <tbody>
                                     <tr>
                                         <td>Calories</td>
-                                        <td>" .$row["calories"] . "Kcal </td>
+                                        <td>" .$row["calories"] . " Kcal </td>
                                     </tr>
                                     <tr>
                                         <td>Protein</td>
@@ -107,6 +109,7 @@
                                     </tr>
                                 </tbody>
                                 </table>
+                                </div>
                            
                            ";
                         }      
