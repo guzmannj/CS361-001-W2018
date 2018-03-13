@@ -1,8 +1,4 @@
 <?php
-$servername = 'oniddb.cws.oregonstate.edu';
-$dbname = 'laik-db';
-$username = 'laik-db';
-$password = '8d2v5ulUA0sMMR4t';
 
 $conn = new PDO("mysql:host=$servername; dbname=$dbname; charset=utf8", $username, $password, 
             [PDO::ATTR_EMULATE_PREPARES => false, 
