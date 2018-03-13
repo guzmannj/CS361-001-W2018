@@ -79,7 +79,36 @@
                     $data = $conn->query($query);
                     if ($data->rowCount()){
                         foreach($data as $row){
-                           echo 'wip';
+                           echo "
+                           
+                           <table class='table table-inverse text-left'>
+                                <thead>
+                                    <tr>
+                                    <th>Nutrients</th>
+                                    <th>Units</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td>" .$row["calories"] . "Kcal </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td> ".$row["protein"] . " G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbs</td>
+                                        <td>" .$row["carbs"] ." G </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fats</td>
+                                        <td>" .$row["fat"] ." G </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                           
+                           ";
                         }      
                     }
                     else{
