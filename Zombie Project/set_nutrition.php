@@ -27,7 +27,7 @@
     <div class="container">
         <div class="goal col-sm-12 text-center">
             <div class="list_goals">
-               <p> Nutrition Page</p>
+               <h2> Nutrition Page</h2>
             </div>
         </div>
         
@@ -38,41 +38,41 @@
         <input type="hidden" name="submitted" value=true: />
         <fieldset>
 			<!-- This implements the height bar-->
-			<div class="row">
-			<div class="col-25">
+			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label for="height">Your Height</label>
 			</div>
-			<div class="col-75">
+			<div class="col-sm-4">
 				<input type="number" id="height" name="height" placeholder="Your height in inches.." required>
 			</div>
 			</div>
 
 			<!-- This implements the weight bar-->
-			<div class="row">
-			<div class="col-25">
+			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label for="number">Your Weight</label>
 			</div>
-			<div class="col-75">
+			<div class="col-sm-4">
 				<input type="number" id="weigh" name="weigh" placeholder="Your weight in pounds.." required>
 			</div>
 			</div>
 
 			<!-- This implements the age bar-->
-			<div class="row">
-			<div class="col-25">
+			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label for="age">Your Age</label>
 			</div>
-			<div class="col-75">
+			<div class="col-sm-4">
 				<input type="number" id="age" name="age" placeholder="Your age.." required>
 			</div>
 			</div>
 
 			<!-- This implements the gender bar-->
-			<div class="row">
-			<div class="col-25">
+			<div class="col-sm-12">
+			<div class="col-sm-4">
 				<label for="gender">Gender</label>
 			</div>
-			<div class="col-75">
+			<div class="col-sm-2">
 				<select id="gender" name="gender">
 				<option value="male">Male</option>
 				<option value="female">Female</option>
@@ -99,7 +99,7 @@
 		</fieldset>
 		<!-- This implements the submit button calling the calculation function on click-->
 		<div class="row">
-		<input type="submit" value="Submit" return >
+		<input type="submit" value="Get the info you need to survive!" return >
 		</div>
 			
       	</form>

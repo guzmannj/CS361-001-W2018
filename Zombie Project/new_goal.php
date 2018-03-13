@@ -26,7 +26,7 @@
             <input type="hidden" name="submitted" value="true"/>
             <fieldset>
                 <label> Activity: <input type="text" name="activity" id="activity" required/></label>
-                <label> Distance or Time: <input type="number" name="time" id="time" required/></label>
+                <label> Time (hours): <input type="number" name="time" id="time" required/></label>
             </fieldset>
             <br/>
             <input type="submit" value="Make a new goal"/>

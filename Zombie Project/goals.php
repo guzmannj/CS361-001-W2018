@@ -38,7 +38,7 @@
                         $data = $conn->query($query);
                         if ($data->rowCount()){
                             foreach($data as $row){
-                                echo '<li class="LI" id="' .$row["goalid"].  '">'.$row["activity"] . ' ' .$row["dist"]. '</li>';
+                                echo '<li id="' .$row["goalid"].  '">'.$row["activity"] . ' ' .$row["dist"]. '</li>';
                             } 
                             echo "<style> #delete{visibility: initial} </style>"; 
                         }

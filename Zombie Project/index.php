@@ -41,7 +41,7 @@
                         <thead>
                         <tr>
                           <th>Goal</th>
-                          <th>Distance / Time </th>
+                          <th> Time (hours) </th>
                         </tr>
                         </thead> 
                         "  ;
