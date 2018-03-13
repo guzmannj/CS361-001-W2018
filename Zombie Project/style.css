@@ -1,10 +1,6 @@
 li{
     list-style:none;
 }
-
-
-
-
 body {
    margin:0;
    padding:0;
@@ -31,7 +27,9 @@ footer {
 * {
     box-sizing: border-box;
 }
-
+.navbar-brand{
+  
+}
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
