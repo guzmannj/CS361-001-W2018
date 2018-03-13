@@ -20,40 +20,36 @@ try{
         $protein = $weigh * 0.75;
         $carbs = $calories / 9;
         $fat = $calories / 4;
-        echo "<p>Your estimated daily metabolic rate is $calories </p>";
-        echo "<p>This means that you need rouhgly $calories calories a day to maintain your current weight.</p>";
-        echo "<p>Your required protein consumption is  $protein grams per day.</p>";
-        echo "<p>Your required carbohydrate consumption is  $carbs grams per day.</p>";
-        echo "<p>Your required fat consumption is  $fat grams per day.</p>";
         break;
         case 'male':
         $calories= 66 + (6.2 *$weigh) + (12.7 * $height) - (6.76 * $age);
         $protein = $weigh * 0.75;
         $carbs = $calories / 9;
         $fat = $calories / 4;
-        echo "<p>Your estimated daily metabolic rate is $calories </p>";
-        echo "<p>This means that you need roughly $calories calories a day to maintain your current weight.</p>";
-        echo "<p>Your required protein consumption is  $protein grams per day.</p>";
-        echo "<p>Your required carbohydrate consumption is  $carbs grams per day.</p>";
-        echo "<p>Your required fat consumption is  $fat grams per day.</p>";        }
+        }
     //}
     echo "calories $calories weight $weigh height $height age $age gender $gender";
-    $sql =$conn->prepare("INSERT INTO traits (weigh, height, age, gender, calories) VALUES (:weigh, :height, :age, :gender, :calories)");
+    $sql =$conn->prepare("INSERT INTO traits (weigh, height, age, gender, calories, protein, carbs, fat) VALUES (:weigh, :height, :age, :gender, :calories, :protein, :carbs, :fat)");
     $sql->bindParam(':weigh', $weigh);
     $sql->bindParam(':height', $height);
     $sql->bindParam(':age', $age);
     $sql->bindParam(':gender', $gender);
     $sql->bindParam(':calories', $calories);
+    $sql->bindParam(':protein', $protein);
+    $sql->bindParam(':carbs', $carbs);
+    $sql->bindParam(':fat', $fat);    
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $weigh = $_POST['weigh'];
     $height =$_POST['height'];
     $age = $_POST['age'];
     $gender = $_POST['gender'];
-     
+    echo "<p>Your estimated daily metabolic rate is $calories </p>";
+    echo "<p>This means that you need roughly $calories calories a day to maintain your current weight.</p>";
+    echo "<p>Your required protein consumption is  $protein grams per day.</p>";
+    echo "<p>Your required carbohydrate consumption is  $carbs grams per day.</p>";
+    echo "<p>Your required fat consumption is  $fat grams per day.</p>";
     $sql->execute();
-        
-    echo "New record created successfully" . ' ' . $calories;
 }
 catch(PDOException $e){    
 echo $sql . "<br>" . $e->getMessage();

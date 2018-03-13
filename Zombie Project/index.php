@@ -59,11 +59,14 @@
                     $data = $conn->query($query);
                     if ($data->rowCount()){
                         foreach($data as $row){
-                            echo '<li> '.$row["calories"] . '</li>';
+                            echo '<li> Calories needed per day: '.$row["calories"] . '</li>';
+                            echo '<li> Grams of protein per day: '.$row["protein"] . '</li>';
+                            echo '<li> Grams of carbs per day: '.$row["carbs"] . '</li>';
+                            echo '<li> Grams of fats per day: '.$row["fat"] . '</li>';
                         }      
                     }
                     else{
-                        echo "<h1>Tables goes here!</h2>";
+                        echo "<h2>You haven't entered any nutritional info!</h2>";
                     }      
                 ?>
             </div>

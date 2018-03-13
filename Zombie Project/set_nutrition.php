@@ -40,8 +40,8 @@
       <?php 
         include('navbar.php');
       ?>
-        
     </header>
+
     <main>
       <!-- This main container-->
     <div class="container">
@@ -123,9 +123,6 @@
 		</div>
 			
       	</form>
-		  <?php 
-			  calculate()
-		 ?>
     </div>
     
 
