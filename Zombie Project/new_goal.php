@@ -1,7 +1,6 @@
 
 <?php
     if (isset($_POST['submitted'])){
-        include('connect_sql.php');
         include('add_new_goals.php');
     }
 ?>
@@ -26,8 +25,8 @@
         <form method="post" action="new_goal.php">
             <input type="hidden" name="submitted" value="true"/>
             <fieldset>
-                <label> Activity: <input type="text" name="activity" id="activity" placeholder="Enter here. . ." required/></label>
-                <label> Distance or Time: <input type="number" name="time" id="time" placeholder="Enter here. . ." required/> min</label>
+                <label> Activity: <input type="text" name="activity" id="activity" required/></label>
+                <label> Distance or Time: <input type="number" name="time" id="time" required/></label>
             </fieldset>
             <br/>
             <input type="submit" value="Make a new goal"/>
@@ -35,5 +34,6 @@
 
     </div>
     </main>   
+
   </body>
 </html>

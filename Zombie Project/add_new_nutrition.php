@@ -39,16 +39,8 @@ try{
     $sql->bindParam(':carbs', $carbs);
     $sql->bindParam(':fat', $fat);    
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $weigh = $_POST['weigh'];
-    $height =$_POST['height'];
-    $age = $_POST['age'];
-    $gender = $_POST['gender'];
-    echo "<p>Your estimated daily metabolic rate is $calories </p>";
-    echo "<p>This means that you need roughly $calories calories a day to maintain your current weight.</p>";
-    echo "<p>Your required protein consumption is  $protein grams per day.</p>";
-    echo "<p>Your required carbohydrate consumption is  $carbs grams per day.</p>";
-    echo "<p>Your required fat consumption is  $fat grams per day.</p>";
+
+
     $sql->execute();
 }
 catch(PDOException $e){    
