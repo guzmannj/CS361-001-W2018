@@ -4,7 +4,7 @@
 include('connect_sql.php');
 
 	// names of variables with NAME of object
-	$weigh = $_POST['weight'];
+	$weigh = $_POST['weigh'];
 	$height =$_POST['height'];
 	$age = $_POST['age'];
 	$gender = $_POST['gender'];
@@ -16,7 +16,7 @@ try{
         switch ($gender)
         {
         case 'female':
-        $calories= 655.1 + (4.35 * $weight ) + (4.7 * $height) - (4.7 * $age);
+        $calories= 655.1 + (4.35 * $weigh ) + (4.7 * $height) - (4.7 * $age);
         $protein = $weigh * 0.75;
         $carbs = $calories / 9;
         $fat = $calories / 4;
@@ -27,7 +27,7 @@ try{
         echo "<p>Your required fat consumption is  $fat grams per day.</p>";
         break;
         case 'male':
-        $calories= 66 + (6.2 *$weight) + (12.7 * $height) - (6.76 * $age);
+        $calories= 66 + (6.2 *$weigh) + (12.7 * $height) - (6.76 * $age);
         $protein = $weigh * 0.75;
         $carbs = $calories / 9;
         $fat = $calories / 4;
