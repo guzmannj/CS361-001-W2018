@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <?php
         include('head.php');
-        include('connect_sql.php');
     ?>
     <style>
         .list_golas li{
@@ -29,15 +28,36 @@
     <main>
     <div class="container">
         <div class="goals col-sm-6 text-center">
-            <div class="list_goals">
+            <div class="row list_goals">
                 <ul>
                     <?php
+                        echo "<h3>Your goals!</h3>
+                        <div class='col-sm-12 text-left subg'>
+                        <table class='table table-inverse'>
+                        <thead>
+                        <tr>
+                          <th>Goal</th>
+                          <th>Distance / Time </th>
+                        </tr>
+                        </thead> 
+                        "  ;
                         $query = "SELECT * FROM goal";
                         $data = $conn->query($query);
                         if ($data->rowCount()){
                             foreach($data as $row){
-                                echo '<li class="LI" id="' .$row["goalid"].  '">'.$row["activity"] . ' ' .$row["dist"]. '</li>';
-                            }      
+                                echo "  
+                              <tr>
+                                <td>".$row["activity"]."</td>
+                                <td>" . $row["dist"] . "</td>
+                              </tr>
+
+                                ";
+                            } 
+                            echo "                            
+                            </tbody>
+                            </table>
+                            </div>
+                            ";     
                         }
                         else{
                             echo "<h1>You don't have any goals to show!</h2>";
@@ -59,10 +79,7 @@
                     $data = $conn->query($query);
                     if ($data->rowCount()){
                         foreach($data as $row){
-                            echo '<li> Calories needed per day: '.$row["calories"] . '</li>';
-                            echo '<li> Grams of protein per day: '.$row["protein"] . '</li>';
-                            echo '<li> Grams of carbs per day: '.$row["carbs"] . '</li>';
-                            echo '<li> Grams of fats per day: '.$row["fat"] . '</li>';
+                           echo 'wip';
                         }      
                     }
                     else{

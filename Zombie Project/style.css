@@ -89,3 +89,22 @@ input[type=submit]:hover {
         margin-top: 0;
     }
 }
+
+/* Makes the both tables on the main page darker, with a border around them. */
+.table-inverse {
+    color: #fff;
+    background-color: #292b2c;
+    border-radius: 15px;
+    padding: 15px;
+    background: #292b2c;
+    margin: 15px;
+}
+
+/* makes goals button align with set Nutrition button in full screen */
+.subg{
+    min-height: 213px;
+}
+
+div > #testy{
+    background-color: #6cf;
+}
