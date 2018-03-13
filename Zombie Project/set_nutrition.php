@@ -7,12 +7,9 @@
 ?>
 
 <!DOCTYPE html>
-
-<html lang="en-US">
-
   <head>
     <?php
-      include('head.php');
+			include('head.php');
     ?>  
   </head>
   <body>
@@ -21,12 +18,12 @@
       <?php 
         include('navbar.php');
       ?>
+        
     </header>
-
     <main>
       <!-- This main container-->
     <div class="container">
-        <div class="goal col-sm-12 text-center">
+        <div class="goals col-sm-12 text-center">
             <div class="list_goals">
                <p> Nutrition Page</p>
             </div>
@@ -44,17 +41,19 @@
 				<label for="height">Your Height</label>
 			</div>
 			<div class="col-75">
-				<input type="number" id="height" name="height" placeholder="Your height in inches.." required>
+				<input type="text" id="height" name="height" placeholder="Your height in inches..">
 			</div>
 			</div>
 
-			<!-- This implements the weight bar-->
+			<!-- This implements the weight bar
+						Weight needs to be programed as weigh,
+						SQL considers weigh as a special character-->
 			<div class="row">
 			<div class="col-25">
-				<label for="number">Your Weight</label>
+				<label for="weight">Your Weight</label>
 			</div>
 			<div class="col-75">
-				<input type="number" id="weigh" name="weigh" placeholder="Your weight in pounds.." required>
+				<input type="number" id="weigh" name="weigh" placeholder="Your weight in pounds..">
 			</div>
 			</div>
 
@@ -64,7 +63,7 @@
 				<label for="age">Your Age</label>
 			</div>
 			<div class="col-75">
-				<input type="number" id="age" name="age" placeholder="Your age.." required>
+				<input type="number" id="age" name="age" placeholder="Your age..">
 			</div>
 			</div>
 
@@ -104,6 +103,9 @@
 		</div>
 			
       	</form>
+		  <?php 
+			  calculate()
+		 ?>
     </div>
     
 
