@@ -1,3 +1,7 @@
+<?php
+    include('connect_sql.php');
+    ?>
+
 
 <meta charset="utf-8">
 <title>Zombie Prep App</title>
