@@ -18,13 +18,15 @@ try {
 
     $activity = $_POST['activity'];
     $time_dis = $_POST['time']; 
-
+    // use exec() because no results are returned
     $sql->execute();
-
-    echo "New record created successfully";
-}
-catch(PDOException $e){
-    echo $sql . "<br>" . $e->getMessage();
+    //Produce success message and redirect to homepage
+    echo '<script type="text/javascript"> alert("Successfull added new goal"); window.location = "./index.php"; </script>';
+    }
+catch(PDOException $e)
+    {
+        
+    echo '<script language="javascript"> alert("'. $sql . "<br>" . $e->getMessage(). '")</script>';
     }
 $conn = null;}
 if($message != ""){
